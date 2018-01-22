@@ -4,7 +4,7 @@ pipeline {
         CI = 'true'
     }
 	parameters {
-		choice(name: 'NEW_VERSION', choices: "\nYES\nNO", description: 'Should I bump up the version')
+		booleanParam(defaultValue: false, description: 'Should I bump up the version', name: 'bumpVersion')
 	}
     stages {
         stage('Build') {
