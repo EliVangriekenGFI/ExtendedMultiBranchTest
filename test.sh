@@ -1,0 +1,1 @@
+cat version.txt
