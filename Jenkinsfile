@@ -16,6 +16,7 @@ pipeline {
 				script{
 					if(params.bumpVersion == true){
 						sh  './test.sh'
+						sh  './bump-version-drynext.sh'
 						echo "Version updated"
 					}else{
 						echo "Version not updated"
