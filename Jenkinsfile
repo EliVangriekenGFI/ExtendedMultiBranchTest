@@ -16,6 +16,7 @@ pipeline {
 				sh 'echo "The current build is:"'
 				script{
 					if(params.bumpVersion == true){
+						sh  bump-version-drynext.sh
 						echo "Version updated"
 					}else{
 						echo "Version not updated"
