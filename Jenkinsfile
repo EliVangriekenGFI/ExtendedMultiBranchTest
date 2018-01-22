@@ -14,7 +14,13 @@ pipeline {
             steps {
                 sh 'echo "Here we can build the project"'
 				sh 'echo "The current build is:"'
-				sh 'cat version.txt'
+				script{
+					if(params.bumpVersion == true){
+						echo "Version updated"
+					}else{
+						echo "Version not updated"
+					}
+				}
             }
         }
 		stage('Test'){
