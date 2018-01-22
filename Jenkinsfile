@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh 'echo "Here we can build the project"'
 				sh 'echo "The current build is:"'
-				cat version.txt
+				sh 'cat version.txt'
             }
         }
 		stage('Test'){
