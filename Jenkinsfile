@@ -15,7 +15,7 @@ pipeline {
                 sh 'echo "Here we can build the project"'
 				script{
 					if(params.bumpVersion == true){
-						sh  'test.sh'
+						sh  './test.sh'
 						echo "Version updated"
 					}else{
 						echo "Version not updated"
