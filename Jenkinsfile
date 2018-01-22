@@ -13,7 +13,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Here we can build the project"'
-				sh 'echo "The current build is:"'
 				script{
 					if(params.bumpVersion == true){
 						sh  bump-version-drynext.sh
