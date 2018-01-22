@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cat version.txt
+echo "this file is printed"
