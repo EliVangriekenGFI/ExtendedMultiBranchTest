@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh 'echo "Here we can build the project"'
 				sh 'echo "The current build is:"'
-				sh 'cat "version.txt"'
+				echo "flag: ${params.bumpVersion}"
             }
         }
 		stage('Test'){
