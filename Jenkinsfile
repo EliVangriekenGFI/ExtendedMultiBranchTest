@@ -3,6 +3,7 @@ pipeline {
 	
 	parameters {
 		booleanParam(defaultValue: false, description: 'Should I bump up the version', name: 'bumpVersion')
+		choice(choices: 'master\nproduction\ndevelopment', description: 'On which branch should I build?', name: 'branch')
 	}
 	
 	environment {
@@ -32,6 +33,12 @@ pipeline {
 		stage('Test'){
 			steps{
 				sh 'echo "Here we can run some tests"'
+			}
+		}
+		
+		stage('MasterDeploy'){
+			when{
+				
 			}
 		}
     }
