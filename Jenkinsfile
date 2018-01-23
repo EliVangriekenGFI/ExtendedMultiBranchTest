@@ -18,9 +18,9 @@ pipeline {
 						sh  './test.sh'
 						sh  './bump-version-drynext.sh'
 						sh  './bump-version.sh'
-						echo "Version updated"
+						sh	'echo "Version updated"'
 					}else{
-						echo "Version not updated"
+						sh	'echo "Version not updated"'
 					}
 				}
             }
