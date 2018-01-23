@@ -35,11 +35,5 @@ pipeline {
 				sh 'echo "Here we can run some tests"'
 			}
 		}
-		
-		stage('MasterDeploy'){
-			when{
-				
-			}
-		}
     }
 }
