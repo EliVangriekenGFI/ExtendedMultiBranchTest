@@ -16,7 +16,7 @@ pipeline {
 				sh 'echo "Switching to specified branch"'
 				//sh 'git checkout ${params.branchName}'
 				//sh 'git pull ${params.branchName}'
-				sh 'echo "switched to ${params.branchName} branch"'
+				sh 'echo "switched to ${branchName} branch"'
 			}
 		}
         stage('Build') {
