@@ -15,7 +15,7 @@ pipeline {
 			steps{
 				sh 'echo "Switching to specified branch"'
 				sh 'git checkout ${branchName}'
-				sh 'git pull ${branchName}'
+				sh 'git pull origin ${branchName}'
 				sh 'echo "switched to ${branchName} branch"'
 			}
 		}
