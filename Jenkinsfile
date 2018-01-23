@@ -17,7 +17,7 @@ pipeline {
 					if(params.bumpVersion == true){
 						sh	'git checkout master'
 						sh	'git pull origin master'
-						sh  './test.sh'
+						sh  './test.sh && echo "next line"'
 						sh 	'nextVersion=$(./bump-version-drynext.sh)'
 						sh	'echo $nextVersion'
 						sh  './bump-version.sh $nextVersion'
