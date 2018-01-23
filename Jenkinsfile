@@ -15,14 +15,14 @@ pipeline {
                 sh 'echo "Here we can build the project"'
 				script{
 					if(params.bumpVersion == true){
-						git checkout master
-						git pull origin master
+						sh	'git checkout master'
+						sh	'git pull origin master'
 						sh  './test.sh'
 						sh  './bump-version-drynext.sh'
 						sh  './bump-version.sh 2.0.0'
-						git add version.txt
-						git commit -m "updated version number"
-						git push
+						sh	'git add version.txt'
+						sh	'git commit -m "updated version number"'
+						sh 	'git push'
 						sh	'echo "Version updated"'
 					}else{
 						sh	'echo "Version not updated"'
