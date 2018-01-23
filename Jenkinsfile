@@ -19,7 +19,7 @@ pipeline {
 						sh	'git pull origin master'
 						sh  './test.sh && echo "next line"'
 						sh 	'nextVersion=$(./bump-version-drynext.sh)'
-						sh	'echo $nextVersion'
+						sh	'nextVersion=$"1.0.0" && echo $nextVersion'
 						sh  './bump-version.sh $nextVersion'
 						sh	'git add version.txt'
 						sh	'git commit -m "updated version number"'
