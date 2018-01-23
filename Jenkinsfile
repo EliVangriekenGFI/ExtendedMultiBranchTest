@@ -11,6 +11,14 @@ pipeline {
     }
 	
     stages {
+		stage('SwitchBranch'){
+			steps{
+				sh 'echo "Switching to specified branch"'
+				sh 'git checkout ${params.branchName}'
+				sh 'git pull ${params.branchName}'
+				sh 'echo "switched to ${params.branchName} branch"'
+			}
+		}
         stage('Build') {
             steps {
                 sh 'echo "Here we can build the project"'
